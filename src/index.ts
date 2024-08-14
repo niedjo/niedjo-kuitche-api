@@ -8,6 +8,7 @@ import projectRouter from './routes/projet.route';
 import commentRouter from './routes/comment.route';
 import experianceRouter from './routes/experiance.route';
 import bodyParser from 'body-parser';
+import tokenRouter from './routes/token.route';
 
 
 dotenv.config();
@@ -35,6 +36,6 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: true })); // Définit u
 app.use('/projet', projectRouter)
 app.use('/comment', commentRouter)
 app.use('/experiance', experianceRouter)
-
+app.use('/newtoken', tokenRouter)
 // we lounch the server
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

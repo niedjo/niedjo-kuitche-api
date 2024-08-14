@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express'
+import { Request, Response, NextFunction } from 'express'
 import jwt from 'jsonwebtoken';
 
 export function generateToken(username : string) {
@@ -17,6 +17,6 @@ export const authenticateToken = async (req : Request, res : Response, next : Ne
             next();
         });
     } catch (error) {
-        
+        return res.send(error)
     }
 }
