@@ -19,7 +19,7 @@ export const setProjet = async (req : Request, res : Response) => {
         initializeApp(firebaseConfig)
         const dateTime = Date.now()
         const storage = getStorage()
-        const storageRef = ref(storage, `imgUrlOfProjet/${dateTime}${req.file.originalname}`)
+        const storageRef = ref(storage, `portfolio/imgUrlOfProjet/${dateTime}${req.file.originalname}`)
 
         // Create file metadata including the content type
         const metadata = {
@@ -48,8 +48,8 @@ export const setProjet = async (req : Request, res : Response) => {
         
     } catch (error : unknown) {
         if (error instanceof Error) {
-            res.status(400).send(error.message)
             console.error(error.message);
+            return res.status(400).send(error.message)
         }
     }
 } 
@@ -60,8 +60,8 @@ export const getProjet = async (req : Request, res : Response) => {
         res.status(200).json(projet)
     } catch (error : unknown) {
         if (error instanceof Error) {
-            res.status(400).send(error.message)
             console.error(error.message);
+            return res.status(400).send(error.message)
         }
     }
 }

@@ -25,5 +25,5 @@ const commentSchema : mongoose.Schema = new Schema(
     }
 )
 
-export default model('projet', commentSchema)
+export default model('comment', commentSchema)
 
