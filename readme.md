@@ -1,6 +1,3 @@
-Voici un exemple de `README.md` professionnel et détaillé pour l'API "Niedjo Kuitche API" :
-
-```markdown
 # Niedjo Kuitche API
 
 **Niedjo Kuitche API** est une API RESTful développée en **Node.js** et **TypeScript** avec une architecture **MVC** (Modèle-Vue-Contrôleur). Cette API permet d'effectuer des opérations CRUD pour le portfolio de Niedjo Kuitche, y compris la gestion des projets, des expériences et des commentaires. Les fichiers (images, etc.) sont stockés dans **Firebase Storage**.
